@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans");
+* {
+    position: relative;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #343a40 !important;
+}
+
+button {
+    width: 150px;
+    height: 150px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container {
+    background-color: #343a40;
+}
+
+.py {
+    padding-top: 20%;
+}
+
+.wrapper {
+    height: 100%;
+    background-color: #f5f6fa;
+}
+
+.wave-btn {
+    color: #fff;
+    text-decoration: none;
+    border: 3px solid #fff;
+    padding: 5px 30px;
+    font-size: 22px;
+    font-weight: 600;
+    font-family: "Noto Sans";
+    line-height: 52px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    transition: all 1s;
+}
+
+.wave-btn:before {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    border-radius: 130px;
+    background-color: #0097e6;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%);
+    animation: wave 5s infinite linear;
+    transition: all 1s;
+}
+
+.wave-btn:hover:before {
+    top: 15px;
+}
+
+.btn-primary-outline {
+    width: 50px;
+    height: 40px;
+}
+
+#try_dices {
+    margin-top: 8em;
+}
+
+#diceOne, #diceTwo {
+    color: #fff;
+}
+
+@keyframes wave {
+    0% {
+        transform: translate(-50%) rotate(-180deg);
+    }
+    100% {
+        transform: translate(-50%) rotate(360deg);
+    }
+}
+
+@media (min-width: 600px){
+
+    .container{
+        display: none;
+    }
+
+    .card{
+        width: 18em;
+        margin-top: 10em;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    #try_dices {
+        --animate-delay: 0.5s;
+    }
+
+    .container-desktop{
+        display: none;
+    }
+
+    .py {
+        padding-top: 50%;
+    }
+
+    #dices{
+        margin-top: 20%;
+    }
+}
